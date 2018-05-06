@@ -1,11 +1,10 @@
 package lab08_code;
 
 
-import java.util.ArrayList;
+import java.io.File;
 
-/**
- * Created by bok on 30/4/18.
- */
+
 public interface RollingStrategy {
-    public void operate(InputMethods methods);
+    public void operation(Method method);
+
 }

@@ -1,12 +1,14 @@
 package lab08_code;
 
-/**
- * Created by bok on 30/4/18.
- */
-public class Byhand implements RollingStrategy{
 
-    public void operate(InputMethods methods){
-        System.out.println(methods);
+import java.io.File;
+
+public class Byhand implements RollingStrategy{
+    @Override
+    public void operation(Method method) {
+        System.out.println("the hand input is " + method);
     }
+
+
 
 }

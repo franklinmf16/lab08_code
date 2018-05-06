@@ -1,31 +1,29 @@
 package lab08_code;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by bok on 30/4/18.
- */
+
 public class Driver {
     public static void main(String[] args) {
         new Driver().run();
     }
 
     public void run(){
-        Storage storage;
+        Manager manager = new Manager();
         Scanner input = new Scanner(System.in);
         System.out.println("please enter the method");
-        int method = input.nextInt();
-
-        if(method == 1){
-
-            int inputNum = input.nextInt();
-            InputMethods methods = new InputMethods(inputNum);
-            storage = new Storage(new Byhand(methods));
-
-        } else if(method == 2){
-            storage = new Storage(new ByFile());
+        int requireMethod = input.nextInt();
+        System.out.println("input is " + requireMethod);
+        if (requireMethod == 1){
+            manager.setRollingStrategy(new Byhand());
+            Method method = new Method();
+            method.setByHand(requireMethod);
+            manager.operation(method);
+        } else if (requireMethod > 1){
+            System.out.println("wrong");
         }
+
+
 
 
     }
