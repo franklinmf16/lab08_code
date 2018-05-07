@@ -14,4 +14,6 @@ public class Manager implements RollingStrategy{
     public void operation(Method method) {
         this.rollingStrategy.operation(method);
     }
+
+
 }
